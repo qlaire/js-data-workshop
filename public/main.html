@@ -1,0 +1,24 @@
+<section id="mainSection">
+	<div class="row">
+	<div class="mainBody">
+
+	<div class="col-lg-4">
+
+		<div class="mainBody">
+			<h1 class="profile">BLOG TITLE</h1>
+			<div class="profileImg"><img class="profileImg" src="http://strangebeaver.com/wp-content/uploads/2011/01/fb/10.jpg"></div>
+		</div>
+	</div>
+
+	<div class="col-lg-8">
+
+		<div ng-repeat="post in allPosts">
+			<h3><a ng-click="post.go()">{{ post.title }}</a></h3>
+			<h5>Post Written By: {{ post._author.username }} on: {{ post.date | date }}</h5>
+			{{ post.body }}
+		</div>
+
+	</div>
+	</div>
+</div>
+</section>
